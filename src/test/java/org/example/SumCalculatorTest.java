@@ -42,8 +42,7 @@ public class SumCalculatorTest {
     @Test
     public void testThatCalcWorksIncorrectWithInt100000() {
         //When
-        int sumResult = calc.sum(100000);
-        Boolean result = sumResult > 2147483647;  //max capacity of int type (sumResult should be 5000050000)
+        int result = calc.sum(100000);    //max capacity of int type 2147483647 but result should be 5000050000
 
         //Then
         long expected = 5000050000l;
